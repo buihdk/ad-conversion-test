@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
+    />
+    <title>React App Starter</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <button onclick="firePixel()">Fire Pixel</button>
+    <div id="root">
+      <div class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function firePixel(r) {
+        return (
+          (img = document.createElement('img')),
+          (img.src = queryParam('s2s')),
+          document.body.appendChild(img),
+          firePixel
+        );
+      }
+      function queryParam(key) {
+        key = key.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + key + '=([^&#]*)').exec(
+          location.search,
+        );
+        return null === regex
+          ? ''
+          : decodeURIComponent(regex[1].replace(/\+/g, ' '));
+      }
+    </script>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <script src="../dist/bundle.js"></script>
+  </body>
+</html>
