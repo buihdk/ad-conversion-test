@@ -2,7 +2,7 @@ import React from 'react';
 import { hot } from 'react-hot-loader/root';
 import I18n from 'i18n-js';
 
-import PacMan from 'src/components/PacMan';
+import PacMan from 'components/PacMan';
 
 const App = () => (
   <>
